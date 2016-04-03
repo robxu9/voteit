@@ -1,0 +1,15 @@
+<h1>Sample Elections</h1>
+<p>Okay, here's what we have. Look good? I'll store it to memory and then open
+up an election for people to vote for until you close it.</p>
+
+<p>The election UUID is <a target="_blank" href="/vote/?uuid={{.uuid}}">{{.uuid}}</a>.</p>
+
+{{range .venues}}
+<a href="{{.url}}">{{.name}} ({{.location.crossStreet}})</a><br/>
+{{end}}
+<br/>
+
+<form action="/elections/close" method="get">
+    <input type="hidden" name="uuid" value="{{.uuid}}">
+    <input type="submit" value="Close Election Pls">
+</form>

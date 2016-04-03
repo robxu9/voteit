@@ -1,0 +1,10 @@
+<h1>Vote</h1>
+<p>Enter your votes below.</p>
+
+<form action="/vote/push" method="get">
+    <input type="hidden" name="uuid" value="{{.uuid}}">
+    {{range $name, $uuid := .options}}
+    {{$name}} <input type="number" name="{{$uuid}}"><br/>
+    {{end}}
+    <input type="submit" value="Push">
+</form>

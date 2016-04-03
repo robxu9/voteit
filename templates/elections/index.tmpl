@@ -1,0 +1,13 @@
+<h1>Sample Elections</h1>
+<p>In order to demonstrate VoteIt's functionality, we need a sample set of
+candidates. We will allow anyone to vote in these elections, but note that
+it is easy enough to add authentication via centralised systems such as
+OAuth2 and CAS.</p>
+
+<p>I've tried to make this easy by providing this with the FourSquare API.</p>
+
+<form action="/elections/4sq" method="get">
+    Where would you like to search for places? <input type="text" name="loc"><br/>
+    What would you like to search for? <input type="text" name="for"><br/>
+    <input type="submit" value="Try it!">
+</form>
